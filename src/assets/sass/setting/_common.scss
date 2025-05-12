@@ -1,0 +1,39 @@
+button,
+a {
+    cursor: pointer;
+    background-color: var(--none);
+}
+
+body {
+    background-color: #404040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >div >div {
+        padding-top: 54px;
+        padding-bottom: 105px;
+    }
+}
+
+.container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 393px;
+    height: 852px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.none {
+    display: none !important;
+}
+
+input {
+    outline: none;
+}

@@ -1,0 +1,52 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+:root {
+  --mainfont: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --red: #FF6D64;
+  --point: #33DA6F;
+
+  --sub01: #FED4AF;
+  --sub02: #FFC18F;
+  --sub03: #FFA565;
+  --sub04: #FF9127;
+  --sub05: #FF840E;
+
+  --suc01: #DCFCE7;
+  --suc02: #86EFAC;
+  --suc03: #22C55E;
+  --suc04: #15803D;
+  --suc05: #14532D;
+
+  --war01: #FFEDD5;
+  --war02: #FDBA74;
+  --war03: #F97316;
+  --war04: #C2410C;
+  --war05: #7C2D12;
+
+  --des01: #FEE2E2;
+  --des02: #FCA5A5;
+  --des03: #EF4444;
+  --des04: #B91C1C;
+  --des05: #7F1D1D;
+
+  --white: #FFFFFF;
+  --gray01: #F2F2F2;
+  --gray02: #E9E9E9;
+  --gray03: #828282;
+  --gray04: #333333;
+  --black: #000000;
+  --none: #00000000;
+
+  // 폰트 세팅
+  color: var(--gray400);
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 400;
+
+  // 폰트 최적화
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
