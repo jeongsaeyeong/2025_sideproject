@@ -11,7 +11,7 @@ const Fifth = () => {
                 <h1>주문을 새롭게</h1>
             </div>
             <img className='logo_big' src={Logo_big} alt="" />
-            <Link to='/'>시작하기</Link>
+            <Link to='/login_kind'>시작하기</Link>
         </div>
     )
 }
