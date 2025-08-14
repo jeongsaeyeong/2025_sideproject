@@ -1,6 +1,5 @@
 import React from 'react'
-import Logo_Small from '../../../assets/img/login/logo_small.svg'
-import Logo_Title from '../../../assets/img/login/logo_title.svg'
+import Logo from '../../../assets/img/login/logo.svg'
 import Google from '../../../assets/img/login/google.svg'
 import Apple from '../../../assets/img/login/apple.svg'
 import Email from '../../../assets/img/login/email.svg'
@@ -10,8 +9,7 @@ const Login_Choose = () => {
     return (
         <div className='Login_Choose_wrap container'>
             <div className="top">
-                <img className='logo_Small' src={Logo_Small} alt="" />
-                <img className='logo_Title' src={Logo_Title} alt="" />
+                <img src={Logo} alt="" />
                 <p>클릭 한번으로 쉬운 주문</p>
             </div>
             <div className="bottom">
@@ -25,7 +23,7 @@ const Login_Choose = () => {
                 </Link>
                 <Link to='/join'>
                     <img src={Email} alt="" />
-                    <h2>구글로 시작하기</h2>
+                    <h2>이메일로 시작하기</h2>
                 </Link>
                 <div>
                     <p>이미 가입 하셨나요?</p>

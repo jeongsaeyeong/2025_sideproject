@@ -9,10 +9,12 @@ import Step02 from '../../assets/img/landing/step02.svg'
 import Step03 from '../../assets/img/landing/step03.svg'
 import Logo_small from '../../assets/img/landing/logo_small.svg'
 import Fifth from './Fifth';
+import { useNavigate } from 'react-router-dom';
 
-const Landing = () => {
+const Landing = ({onLogin}) => {
     const [step, setStep] = useState(1);
     const [showFifth, setShowFifth] = useState(false);
+    const navigation = useNavigate();
 
     const onSkip = () => {
         setStep(5);
@@ -58,43 +60,56 @@ const Landing = () => {
         }
     }, [step]);
 
-     return (
-        <div className='Landing_wrap container'>
-            {step === 1 && <First setStep={setStep} />}
-            {step === 5 && showFifth && <Fifth />}
+    useEffect(()=>{
+        if(onLogin){
+            navigation('/main');
+        }
+    },[onLogin])
 
-            {step >= 2 && step <= 4 && <img className='logo' src={Logo_small} alt="" />}
+    return (
+        <>
+            {onLogin ? (
+                <></>
+            ) : (
 
-            <AnimatePresence mode="wait">
-                {step >= 2 && step <= 4 && (
-                    <motion.div
-                        key={step}
-                        variants={variants}
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        transition={{ duration: 0.4 }}
-                    >
-                        {renderContent()}
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                <div className='Landing_wrap container'>
+                    {step === 1 && <First setStep={setStep} />}
+                    {step === 5 && showFifth && <Fifth />}
 
-            {step >= 2 && step <= 4 && (
-                <>
-                    <img className='step' src={stepImages[step]} alt="" />
-                    <div className="button_box">
-                        <button className="skip" onClick={onSkip}>건너뛰기</button>
-                        <button
-                            className="next"
-                            onClick={() => setStep(prev => Math.min(prev + 1, 5))}
-                        >
-                            다음
-                        </button>
-                    </div>
-                </>
+                    {step >= 2 && step <= 4 && <img className='logo' src={Logo_small} alt="" />}
+
+                    <AnimatePresence mode="wait">
+                        {step >= 2 && step <= 4 && (
+                            <motion.div
+                                key={step}
+                                variants={variants}
+                                initial="initial"
+                                animate="animate"
+                                exit="exit"
+                                transition={{ duration: 0.4 }}
+                            >
+                                {renderContent()}
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+
+                    {step >= 2 && step <= 4 && (
+                        <>
+                            <img className='step' src={stepImages[step]} alt="" />
+                            <div className="button_box">
+                                <button className="skip" onClick={onSkip}>건너뛰기</button>
+                                <button
+                                    className="next"
+                                    onClick={() => setStep(prev => Math.min(prev + 1, 5))}
+                                >
+                                    다음
+                                </button>
+                            </div>
+                        </>
+                    )}
+                </div>
             )}
-        </div>
+        </>
     );
 };
 

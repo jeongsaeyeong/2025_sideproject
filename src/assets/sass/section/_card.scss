@@ -1,0 +1,486 @@
+.Card_wrap {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 30px;
+    position: relative;
+
+    .main {
+        padding: 0 5px;
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+
+            h1 {
+                font-size: 25px;
+                font-weight: 600;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            >a {
+                position: absolute;
+                width: 320px;
+                border-radius: 15px;
+            }
+
+            a:nth-child(1) {
+                top: 0px;
+                z-index: 1;
+            }
+
+            a:nth-child(2) {
+                top: 140px;
+                z-index: 2;
+            }
+
+            a:nth-child(3) {
+                top: 280px;
+                z-index: 3;
+                box-shadow: 0px 4px 4px 0px #00000040;
+            }
+        }
+    }
+
+    >a {
+        width: 340px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F7F7F7;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 165px;
+        box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1);
+
+        img {
+            width: 26px;
+            margin-right: 20px;
+        }
+
+        p {
+            font-weight: 600;
+        }
+    }
+}
+
+.Card_Puls_wrap {
+    padding-left: 21px;
+    padding-right: 21px;
+
+    .header {
+        padding: 20px 0 30px;
+        display: flex;
+        align-items: center;
+
+        >button {
+            img {
+                width: 30px;
+                margin-right: 10px;
+            }
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+
+    .main {
+        .card_input {
+            label {
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            input {
+                margin: 10px 0 20px;
+                width: 100%;
+                border-radius: 5px;
+                background-color: var(--gray01);
+                height: 40px;
+                padding-left: 20px;
+            }
+
+            .box {
+                display: flex;
+                justify-content: space-between;
+
+                >div {
+                    width: 48%;
+                }
+            }
+        }
+
+        .card_info {
+            box-shadow: 0px 1px 4px 0px #0000001A;
+            padding: 40px 25px;
+            height: 235px;
+            margin-bottom: 30px;
+
+            .checkbox {
+                display: flex;
+                margin-bottom: 10px;
+                align-items: center;
+            }
+
+            input {
+                display: none;
+            }
+
+            .checkmark {
+                position: relative;
+                width: 20px;
+                height: 20px;
+                background-image: url(../../img/home/checkbox_bin.svg);
+            }
+
+            input:checked+.checkmark::after {
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-size: cover;
+                position: absolute;
+                background-image: url(../../img/home/checkbox_full.svg);
+            }
+
+            .all {
+                padding-bottom: 10px;
+                border-bottom: 1px solid var(--gray02);
+                margin-bottom: 30px;
+
+                p {
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-left: 15px;
+                }
+            }
+
+            .alone {
+                align-items: center;
+
+                >label {
+                    margin-bottom: 15px;
+                }
+
+                .checkmark {
+                    background-image: url(../../img/home/checkbox_bin_small.svg);
+                    width: 15px;
+                    height: 15px;
+                }
+
+                input:checked+.checkmark::after {
+                    width: 15px;
+                    height: 15px;
+                }
+
+                p {
+                    font-size: 13px;
+                    color: var(--gray03);
+                    margin: 0 15px;
+                    margin-right: 10px;
+                }
+
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        >button {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--sub04);
+            color: var(--white);
+            border-radius: 10px;
+        }
+    }
+}
+
+.Card_Plus_Done_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    >div {
+        margin-top: 40px;
+
+        img {
+            width: 205px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+
+    >a {
+        width: 351px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: var(--sub04);
+        color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        box-shadow: 0px 2px 4px 0px #00000040;
+    }
+}
+
+.Card_Manage_wrap {
+    background-color: var(--gray02);
+
+    .header {
+        padding: 35px 15px;
+        display: flex;
+        align-items: center;
+        height: 100px;
+        margin-bottom: 70px;
+
+        img {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .card_list {
+            justify-content: center;
+            display: flex;
+            margin-bottom: 70px;
+
+            .card {
+                background-color: var(--white);
+                width: 300px;
+                height: 315px;
+                border-radius: 15px;
+                border: 1px solid #D9D9D9;
+                padding: 36px 20px;
+
+                div {
+                    padding: 0 18px;
+                    border-bottom: 1px solid #D9D9D9;
+                    margin-bottom: 30px;
+
+                    img {
+                        padding-bottom: 30px;
+                    }
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 12px;
+                }
+
+                .number {
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        >button {
+            width: 340px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F7F7F7;
+            border-radius: 10px;
+            box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1);
+
+            img {
+                width: 26px;
+                margin-right: 20px;
+            }
+
+            p {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.card_pop_wrap {
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    top: 0;
+    width: inherit;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .pop {
+        width: 100%;
+        height: 318px;
+        background-color: var(--white);
+        border-radius: 15px 15px 0 0;
+        padding: 0 25px 41px;
+
+        .down {
+            width: 100%;
+            height: 21px;
+            align-items: flex-end;
+
+            img {
+                width: 100px;
+            }
+        }
+
+        h3 {
+            font-size: 16px;
+            text-align: center;
+            padding: 30.5px 0 20.5px;
+            font-weight: 700;
+        }
+
+        .number {
+            padding-top: 22.5px;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 14px;
+            padding-bottom: 22.5px;
+        }
+
+        .delete {
+            display: flex;
+            width: 340px;
+            height: 50px;
+            background-color: #F7F7F7;
+            border-radius: 10px;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+            margin-top: 41px;
+
+            img {
+                width: 28px;
+                margin-right: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.card_pop_del,
+.card_pop_ondel {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: inherit;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .pop_del {
+        background-color: var(--white);
+        width: 330px;
+        height: 200px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            padding-top: 16px;
+            font-size: 14px;
+            margin-bottom: 34px;
+            font-weight: 500;
+        }
+
+        .btn_wrap {
+            width: 285px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            button {
+                width: 135px;
+                height: 40px;
+                background-color: var(--gray02);
+                border-radius: 10px;
+                color: var(--white);
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .delete {
+                background-color: var(--sub05);
+            }
+        }
+
+    }
+}
+
+.card_pop_ondel {
+    .pop_ondel {
+        background-color: var(--white);
+        flex-direction: column;
+        width: 330px;
+        height: 371px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-top: 10px;
+            width: 141px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+
+        button {
+            width: 280px;
+            height: 50px;
+            background-color: var(--sub05);
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 700;
+            box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
+        }
+    }
+}

@@ -10,7 +10,11 @@ const Login = () => {
     const navigation = useNavigate();
 
     const onBack = () => {
-        navigation(-1);
+        navigation('/login_kind');
+    }
+
+    const onMain = () => {
+        navigation('/main');
     }
 
     return (
@@ -35,7 +39,7 @@ const Login = () => {
                     </div>
                     <Link to='/findpass'>비밀번호 찾기</Link>
                 </div>
-                <button className="login_btn">로그인하기</button>
+                <button className="login_btn" onClick={() => { onMain() }}>로그인하기</button>
                 <div className="decoration">
                     <div></div>
                     <p>or</p>

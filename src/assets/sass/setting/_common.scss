@@ -12,7 +12,7 @@ body {
 
     >div >div {
         padding-top: 54px;
-        padding-bottom: 105px;
+        padding-bottom: 103px;
     }
 }
 
@@ -20,11 +20,11 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     width: 393px;
-    height: 852px;
+    min-height: 852px;
+    height: 100vh;
     margin: 0 auto;
     background-color: var(--white);
 }
-
 
 ::-webkit-scrollbar {
     display: none;
@@ -36,4 +36,10 @@ body {
 
 input {
     outline: none;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
